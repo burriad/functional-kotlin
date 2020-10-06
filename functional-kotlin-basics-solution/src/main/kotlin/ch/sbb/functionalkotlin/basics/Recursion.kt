@@ -1,7 +1,5 @@
 package ch.sbb.functionalkotlin.basics
 
-import java.math.BigInteger
-
 // 2.1 Given the function prepend, write a recursive function concat that concatenates a list of chars to a string
 fun prepend(c: Char, s: String): String = "$c$s"
 
@@ -21,11 +19,16 @@ fun middle(list: List<Int>) = list.size / 2
 
 // 2.3 (HARD) Create a tail-recursive version of the Fibonacci function
 // Hint: the Fibonacci series is 1, 1, 2, 3, 5, 8, 13, 21; hence the number n is the sum of the numbers n-2 and n-1
-fun fib(n: Int): Int {
-    tailrec fun fibImpl(x: Int): Int = when {
-        x == 0 -> 1
-        x == 1 -> 1
-        else -> fibImpl(x - 1) + fibImpl(x - 2)
-    }
-    return fibImpl(n)
-}
+fun fibRec(n: Int): Int =
+        when {
+            n == 0 -> 1
+            n == 1 -> 1
+            else -> fibRec(n - 1) + fibRec(n - 2)
+        }
+
+tailrec fun fibCorec(n: Int, a: Int = 0, b: Int = 1): Int =
+        when (n) {
+            0 -> a
+            1 -> b
+            else -> fibCorec(n - 1, b, a + b)
+        }
