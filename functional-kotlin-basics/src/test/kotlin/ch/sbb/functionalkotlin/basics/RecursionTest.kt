@@ -7,7 +7,7 @@ class RecursionTest {
 
     @Test
     fun `concat of some characters`() {
-        val chars = listOf<Char>('a', 'b', 'c')
+        val chars = listOf('a', 'b', 'c')
 
         val result = concat(chars)
         Assert.assertEquals("abc", result)
@@ -33,7 +33,7 @@ class RecursionTest {
 
     @Test
     fun `fibonacci of 5`() {
-        val result = fib(5)
+        val result = fib_corec(5)
         Assert.assertEquals(5, result)
     }
 

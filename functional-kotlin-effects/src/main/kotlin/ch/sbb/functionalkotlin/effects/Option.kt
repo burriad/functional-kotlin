@@ -8,7 +8,7 @@ sealed class Option<out A> {
     fun getOrElse(default: @UnsafeVariance A): A = TODO("Implement this function")
 
     // Exercise 3.2: Create a map function to change an Option<A> into an Option<B> by applying a function from A to B
-    // Hint: the function can be either implemented in the subclasses or once for both subtypes in the parent class
+    // Hint: the function can be either implemented in the subclasses (by making this function abstract) or once for both subtypes in the parent class
     fun <B> map(f: (A) -> B): Option<B> = TODO("map")
 
     // Exercise 3.3: Create a flatMap instance function taking as an argument a function from A to Option<B> and returning an Option<B>.

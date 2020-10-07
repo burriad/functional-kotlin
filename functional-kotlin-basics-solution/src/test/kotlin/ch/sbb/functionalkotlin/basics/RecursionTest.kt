@@ -33,7 +33,7 @@ class RecursionTest {
 
     @Test
     fun `fibonacci of 5`() {
-        val result = fib(5)
+        val result = fibCorec(5)
         Assert.assertEquals(5, result)
     }
 

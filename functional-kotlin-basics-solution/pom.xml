@@ -9,7 +9,6 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <groupId>ch.sbb</groupId>
   <artifactId>functional-kotlin-basics-solution</artifactId>
   <name>Functional Kotlin-Basics Solution</name>
 
@@ -20,7 +19,7 @@
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-test</artifactId>
+      <artifactId>kotlin-test-junit</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>

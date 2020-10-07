@@ -15,7 +15,7 @@ class FunctionsTest {
     @Test
     fun `parameterize isEven with ceil and truncate`() {
         Assert.assertTrue(isEven(3.6F, Math::round))
-        Assert.assertFalse(isEven(3.6F, { f: Float -> f as Int }))
+        Assert.assertFalse(isEven(3.6F) { f: Float -> f.toInt() })
     }
 
 // TODO More tests

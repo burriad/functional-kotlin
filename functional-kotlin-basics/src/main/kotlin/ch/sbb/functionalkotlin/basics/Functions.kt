@@ -4,22 +4,22 @@ package ch.sbb.functionalkotlin.basics
 fun addOneProvider(): (Int) -> Int = TODO("implement")
 
 // Exercise 1.2: Write a higher order function that takes a float and a function f converting a float to an int and
-// check whether the result of applying the function f to the input input value is even
+// checks whether the result of applying the function f to the input value is even
 fun isEven(value: Float, f: (Float) -> Int): Boolean = TODO("implement")
 
-// Excercise 1.3: Write a higher order function that takes a map of strings and return a function that returns the
+// Exercise 1.3: Write a higher order function that takes a map of strings and returns a function that returns the
 // length of the value for a specific key, or zero when the key is not present
 fun valueLength(map: Map<String, String>): (String) -> Int = TODO("implement")
 
-// Exercise 1.4: Write a higher order function that partially applies the string argument in countOccurence
-fun countOccurence(string: String, char: Char): Int = string.filter { c -> c.equals(char, true) }.length
+// Exercise 1.4: Partially apply the countOccurrence function so that you get a function counting the number
+// of a given character in the string "The quick brown fox jumps over the hedge"
+fun countOccurrence(string: String, char: Char): Int = string.filter { c -> c.equals(char, true) }.length
+val countOccurrence: (Char) -> Int = TODO("implement")
 
-val countOccurence: (Char) -> Int = TODO("implement")
-
-// Exercise 1.5: Write a higher order function that adapts a predicate to a function that return the value when the predicate is true and null otherwise
+// Exercise 1.5: Write a higher order function that adapts a predicate to a function that returns the value when the predicate is true and null otherwise
 fun predicateToPassthrough(f: (Int) -> Boolean): (Int) -> Int? = TODO("implement")
 
-// Exercise 1.6: Convert the following function into a curried function.
+// Exercise 1.6: Convert the following function into a curried function
 // Hint: Write it in block syntax
 fun func(a: String, b: String, c: String, d: String): String = "$a, $b, $c, $d"
 
